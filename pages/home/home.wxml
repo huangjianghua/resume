@@ -1,0 +1,19 @@
+<!--pages/home/home.wxml-->
+<!-- tabBar -->
+<view class="custom-tab-bar">
+    <view class="tab-bar-border">
+        <view class="item" wx:for="{{tabBarItems}}" wx:for-item="tabBarItems" wx:key="tabBarItems" data-tabid="{{index}}" bindtap="switchTabBar">
+            <image src="{{tabid===index?tabBarItems.iconPath:tabBarItems.slect_icon_path}}"></image>
+            <text style="{{tabid===index?'color:#333;':'color:#999;'}}">{{tabBarItems.text}}</text>
+        </view>
+    </view>
+</view>
+<!-- 切换不同的组件 -->
+<!-- 基本信息 -->
+<base-info wx:if="{{tabid===0}}"></base-info>
+<!-- 工作经验 -->
+<base-work wx:if="{{tabid===1}}"></base-work>
+<!-- 专业技能 -->
+<base-skills wx:if="{{tabid===2}}"></base-skills>
+<!-- 博客创作 -->
+<base-blog wx:if="{{tabid===3}}"></base-blog>

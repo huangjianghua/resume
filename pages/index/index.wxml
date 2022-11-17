@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<!-- 图表 -->
+<view class="echarts">
+    <button plain="true" style="position: fixed;z-index: 100;bottom: 10%;left:50%;transform:translateX(-50%);color:#704c0ed8;border: 1rpx solid #815811d0;" bindtap="navToHome">进入星球</button>
+    <!-- 注意：该组件必须在json中引入才可以使用 -->
+    <ec-canvas class="echarts-canvas" id="echarts-dom" canvas-id="echarts" ec="{{ ec }}"></ec-canvas>
+</view>

@@ -1,0 +1,23 @@
+<!--pages/components/mine-blog/mine-blog.wxml-->
+<!-- 具体内容 -->
+<!-- 头部gif动画 -->
+<view class="header" style="margin-top: {{statusBarHeightRpx}}rpx;">
+    <view class="bg-image">
+        <text class="title">author:三叶雨</text>
+        <text class="sub-title">心怀热爱，心怀期待。</text>
+    </view>
+</view>
+<!-- 联系信息相关 -->
+<view class="global-container" style="top: {{statusBarHeightRpx}}rpx;">
+    <view class="global-card">
+        <view class="global-card-container">
+            <view class="contact-item contact-border" hover-class="click-hover" wx:for="{{contactLists}}" wx:for-index="contact_idx" wx:for-item="contactLists" wx:key="contact_idx" data-index="{{contact_idx}}" bindtap="copyLink">
+                <image class="contact-item-icon" src="{{contactLists.icon}}"></image>
+                <text class="contact-item-title">{{contactLists.title}}</text>
+                <image class="contact-item-copy-icon" src="/pages/src/static/image/copy.png"></image>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 公众号组件 -->
+<official-account></official-account>

@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "ec-canvas": "../../../ec-canvas/ec-canvas",
+        "custom-nav-bar":"../../components/custom-nav-bar/custom-nav-bar"
+    }
+}

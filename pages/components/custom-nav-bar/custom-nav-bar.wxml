@@ -1,0 +1,25 @@
+<!--pages/components/custom-nav-bar/custom-nav-bar.wxml-->
+<!-- 大家可以自行选择显示 (状态栏/导航栏/navbar左侧图标/navbar中间的内容/navbar右侧图标) 都可以通过父组件传参，不够的可以自行定义。-->
+<view class="custom-nav-bar">
+	<!--  状态栏-->
+	<view class="status-bar" style="height: {{statusBarHeightRpx}}rpx;"></view>
+	<!-- 导航栏 -->
+	<!-- 本次我只用到了状态栏，大家需要导航栏时可以将wx:if="{{false}}"移除即可 -->
+	<view class="nav-bar" wx:if="{{false}}" style="height:{{navBarHeightRpx}}rpx;">
+		<!-- navbar左侧图标 -->
+		<view class="left-icon" style="height: {{navBarHeightRpx*0.8}}rpx;line-height: {{navBarHeightRpx/2}}rpx;" wx:if="{{lIconType}}" hover-class="custom-nav-hover" bindtap="navBtnTo">
+			<icon icon="{{lIconType}}" color="{{lIconColor}}" size="{{lIconSize}}"></icon>
+		</view>
+		<!-- navbar中间的内容 -->
+		<view class="middle-content" style="{{style}}" hover-class="{{isTriangle?'custom-nav-hover':''}}" bindtap="navMiddleToEmit">
+			<!-- 具名插槽 -->
+			<slot name="middle_content"></slot>
+			<!-- 右下角的三角形 -->
+			<view class="triangle {{isTriangle?'low-right-triangle':''}}" wx:if="{{title}}">{{title}}</view>
+		</view>
+		<!-- navbar右侧图标 -->
+		<view class="right-icon" wx:if="{{rightIcon}}">
+			<image src="{{rightIcon}}"></image>
+		</view>
+	</view>
+</view>

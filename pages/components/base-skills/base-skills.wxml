@@ -1,0 +1,36 @@
+<!--pages/components/base-skills/base-skills.wxml-->
+<!-- 自定义导航栏 -->
+<custom-nav-bar></custom-nav-bar>
+<!-- 具体内容 -->
+<view class="echarts-info">
+    <!-- <view class="list">
+        <view class="title" hover-class="box-hover">
+            <text>技术栈</text>
+        </view>
+    </view> -->
+    <view class="list" style="padding: 8rpx 8rpx;background-color: rgba(233, 233, 233, 0.534);">
+        <!-- 技能列表图表 -->
+        <view class="echarts" hover-class="box-hover" style="height:1300rpx">
+            <ec-canvas class="echarts-canvas" id="echarts-skills-dom" canvas-id="echarts-skills" ec="{{ ec_skills }}"></ec-canvas>
+        </view>
+    </view>
+    <view class="list">
+        <view class="title" hover-class="box-hover">
+            <text>工具集</text>
+        </view>
+        <view class="title" hover-class="box-hover">
+            <text>编码工具：vscode、webstorm、sublime、Hbuilder、微信开发者工具等</text>
+        </view>
+        <view class="title" hover-class="box-hover">
+            <text>常用工具：npm、webpack、git等</text>
+        </view>
+        <view class="title" hover-class="box-hover">
+            <text>设计工具：ps、pxcook等</text>
+        </view>
+        <view class="title" hover-class="box-hover">
+            <text>UI组件库：ElementUI、iview、cube-ui、vant等</text>
+        </view>
+    </view>
+</view>
+<!-- 占位盒子 -->
+<view style="height: {{navBarHeightRpx+navBarHeightRpx}}rpx;"></view>

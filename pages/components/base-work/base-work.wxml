@@ -1,0 +1,50 @@
+<!--pages/components/base-work/base-work.wxml-->
+<!-- 自定义导航栏 -->
+<custom-nav-bar></custom-nav-bar>
+<!-- 图表展示 -->
+<view class="echarts-info title-bg" wx:for="{{projectLists}}" wx:for-index="project_index" wx:for-item="projectLists" wx:key="project_index">
+    <!-- 技术栈图表 -->
+    <view class="list">
+        <view class="title title-bg" hover-class="box-hover">
+            <text style="font-weight: bold;">{{projectLists.appName}}</text><text>{{projectLists.type}}</text>
+        </view>
+        <view class="title">
+            <text>介绍</text>
+            <rich-text nodes="{{projectLists.duty}}"></rich-text>
+        </view>
+        <!-- 展开技术栈事件 -->
+        <view class="title {{projectLists.isSkillsPage?'select-list':''}}" hover-class="click-hover" data-list_skills_id="{{project_index}}" bindtap="showSkillsPage">
+            <text>技术栈</text>
+            <text class="arrow">{{!projectLists.isSkillsPage?'展开»':'收起⇡'}}</text>
+        </view>
+        <!-- 技术栈图表 -->
+        <view class="list" hidden="{{!projectLists.isSkillsPage}}" style="padding: 8rpx 8rpx;background-color: rgba(233, 233, 233, 0.534);">
+            <view class="echarts" hover-class="box-hover">
+                <!-- 注意：该图表组件必须在json中引入才可以使用,而且每个图表组件绑定在一个DOM上，由于ID唯一不能将多个图表显示在同一个组件上，如果想要显示多个图表可以将ID改变，可以设置成当前列表的索引。 -->
+                <ec-canvas class="echarts-canvas" id="echarts-skills-page-dom{{project_index}}" canvas-id="echarts-skills-page" ec="{{ ec_skills_page }}"></ec-canvas>
+            </view>
+        </view>
+        <!-- 展开页面结构事件 -->
+        <view class="title {{projectLists.isStructurePage?'select-list':''}}" hover-class="click-hover" data-list_structure_id="{{project_index}}" bindtap="showPageStructure">
+            <text>页面结构</text>
+            <text class="arrow">{{!projectLists.isStructurePage?'展开»':'收起⇡'}}</text>
+        </view>
+        <!-- 页面结构图表 -->
+        <view class="list" hidden="{{!projectLists.isStructurePage}}" style="padding: 8rpx 8rpx;background-color: rgba(233, 233, 233, 0.534);">
+            <!-- 图表 -->
+            <view class="echarts" style="height: 2000rpx;" hover-class="box-hover">
+                <!-- 注意：该图表组件必须在json中引入才可以使用 -->
+                <ec-canvas class="echarts-canvas" id="echarts-page-structure-dom{{project_index}}" canvas-id="echarts-page-structure" ec="{{ ec_page_structure }}"></ec-canvas>
+            </view>
+        </view>
+        <!-- 展示程序 -->
+        <view class="title" hover-class="click-hover" wx:if="{{projectLists.shortLink}}" data-listid="{{project_index}}" bindtap="navToApp">
+            <text>进入访问</text>
+            <text>{{projectLists.envVersion==="trial"?'体验版':'正式版'}} »</text>
+        </view>
+    </view>
+
+
+</view>
+<!-- 占位盒子 -->
+<view style="height: {{navBarHeightRpx+navBarHeightRpx}}rpx;"></view>

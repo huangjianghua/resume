@@ -1,0 +1,52 @@
+/* pages/components/base-skills/base-skills.wxss */
+@import "../../src/static/style/variable.scss";
+page {
+  background-color: rgba(238, 238, 238, 0.989);
+}
+// 图表样式
+.echarts-info {
+  position: relative;
+  box-sizing: border-box;
+  width: 710rpx;
+  margin: 20rpx auto 50rpx;
+  .list {
+    box-sizing: border-box;
+    margin: 10rpx auto;
+    color: $main-text-color;
+    font-size: $m-font-size;
+    border-radius: 20rpx;
+    overflow: hidden;
+    background-color: $main-bg-color;
+    box-shadow: $box-shadow-light;
+    .echarts {
+      box-sizing: border-box;
+      width: 100%;
+      height: 700rpx;
+      border-radius: 20rpx;
+      padding: 10rpx auto;
+      background-color: $main-bg-color;
+    }
+    .title {
+      box-sizing: border-box;
+      width: 680rpx;
+      margin: auto;
+      padding: 25rpx 20rpx;
+      //   background-color: $main-bg-color;
+      border-bottom: $border;
+      @include flex(space-between, center);
+      &:last-child {
+        border: none;
+      }
+      & text:nth-child(2) {
+        color: rgba(44, 44, 44, 0.726);
+      }
+    }
+  }
+}
+// 图表最核心样式
+.echarts-canvas {
+  box-sizing: border-box;
+  height: 100%;
+  margin: auto;
+  display: block;
+}

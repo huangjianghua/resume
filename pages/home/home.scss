@@ -1,0 +1,39 @@
+/* pages/home/home.wxss */
+@import "../src/static/style/variable.scss";
+page {
+  background-color: #eee;
+}
+// 底部自定义tabbar
+.custom-tab-bar {
+  box-sizing: border-box;
+  width: 680rpx;
+  height: 110rpx;
+  position: fixed;
+  right: 0;
+  bottom: 40rpx;
+  left: 0;
+  margin: auto;
+  border-radius: 50rpx;
+  overflow: hidden;
+  z-index: 10000;
+  box-shadow: $box-shadow-light;
+  .tab-bar-border {
+    box-sizing: border-box;
+    @include flex(center, center);
+    background-color: $main-bg-color;
+    .item {
+      box-sizing: border-box;
+      flex: 1;
+      height: 110rpx;
+      @include flex(center, center);
+      flex-direction: column;
+      font-size: $l-font-size;
+      color: $main-text-color;
+    //   filter: grayscale(80%);
+      image {
+        width: 50rpx;
+        height: 50rpx;
+      }
+    }
+  }
+}

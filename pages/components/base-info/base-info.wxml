@@ -1,0 +1,55 @@
+<!--pages/components/base-info/base-info.wxml-->
+<!-- 自定义导航栏 -->
+<custom-nav-bar title="基本信息"></custom-nav-bar>
+<!-- 具体内容 -->
+<view class="global-container" style="top: 10rpx;">
+    <!-- 基础 -->
+    <view class="global-card">
+        <!-- <view class="info-card-title"></view> -->
+        <view class="global-card-container">
+            <!-- 头像 -->
+            <view class="base-img-v">
+                <image class="base-img" src="{{personalInfo.avatar}}" mode="aspectFill"></image>
+            </view>
+            <!-- 基础信息 -->
+            <view class="base-row-container">
+                <view>姓名 : {{personalInfo.name}}</view>
+                <view>期望职位：<text style="color: rgb(144, 155, 252);border: 1rpx solid rgb(144, 155, 252);border-radius: 10rpx;padding: 1rpx 2rpx;">前端工程师</text></view>
+                <view>{{personalInfo.sex}} {{personalInfo.age}} {{personalInfo.work}}</view>
+                <view>地址 : {{personalInfo.address}}</view>
+                <!-- 联系方式 -->
+                <view class="base-row-container">
+                    <view class="contact-item" hover-class="click-hover" wx:for="{{contactLists}}" wx:for-item="contactLists" data-contactid="{{index}}" wx:key="index" bindtap="selectContact">
+                        <image class="contact-item-icon" src="{{contactLists.icon}}"></image>
+                        <view class="contact-item-title">{{contactLists.title}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 教育背景 -->
+    <view class="global-card">
+        <view class="info-card-title">
+            <view class="border"></view>
+            <text class="text">教育背景</text>
+        </view>
+        <view class="global-card-container" wx:for="{{educationLists}}" wx:for-item="educationLists" data-educatid="{{index}}" wx:key="index" bindtap="selectEducat">
+            <view class="school-item" hover-class="click-hover">
+                <image class="school-item-icon" src="{{educationLists.icon}}"></image>
+                <text class="school-item-title">{{educationLists.title}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- 自我评价 -->
+    <view class="global-card">
+        <view class="info-card-title">
+            <view class="border"></view>
+            <text class="text">自我评价</text>
+        </view>
+        <view class="global-card-container">
+            <rich-text class="selfassessment-info" nodes="{{personalInfo.selfAssessment}}"></rich-text>
+        </view>
+    </view>
+</view>
+<!-- 占位盒子 -->
+<view style="height: {{navBarHeightRpx+navBarHeightRpx}}rpx;"></view>
