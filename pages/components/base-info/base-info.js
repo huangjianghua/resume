@@ -46,7 +46,7 @@ Component({
         // 教育背景相关列表
         educationLists: [
             { title: '昆明理工大学（本科）', icon: '/pages/src/static/image/school.png' },
-            { title: '测绘工程', icon: '/pages/src/static/image/majors.png' },
+            { title: '测绘工程', icon: '/pages/src/static/image/other.png' },
             { title: '2016-2021', icon: '/pages/src/static/image/time.png' },
         ]
     },

@@ -19,13 +19,13 @@ function setOptionPie(chart, data) {
         },
         series: [
             {
-                name: 'Area Echarts',//图表名称
+                name: "Area Echarts", //图表名称
                 type: "pie",
-                radius: ["40%", "70%"],
-                roseType: 'radius',
+                radius: ["10%", "60%"],
+                // roseType: "radius",//
                 avoidLabelOverlap: true, //是否启用防止标签重叠策略
                 // top: "top",
-                bottom: '25%',
+                bottom: "25%",
                 animationType: "expansion", //初始动画效果
                 animation: true,
                 animationDuration: 3000,
@@ -34,7 +34,8 @@ function setOptionPie(chart, data) {
                     borderRadius: 5,
                     borderWidth: 2,
                 },
-                label: { //标签配置
+                label: {
+                    //标签配置
                     show: true,
                     position: "outside",
                     textBorderColor: "rgba(230, 22, 22, 1)",
@@ -45,20 +46,22 @@ function setOptionPie(chart, data) {
                     edgeDistance: 10,
                     bleedMargin: 10,
                 },
-                labelLine: {//标签线配置
+                labelLine: {
+                    //标签线配置
                     show: true,
                     showAbove: true,
                     length: 6,
                     smooth: true,
                 },
                 emphasis: {
-                    label: {//选中高亮配置
+                    label: {
+                        //选中高亮配置
                         show: true,
                         fontSize: "14",
                         fontWeight: "bold",
                     },
                 },
-                data: data,// 显示的数据
+                data: data, // 显示的数据
             },
         ],
     };
@@ -85,75 +88,81 @@ function setOptionTree(chart, data, echartsName) {
         },
         series: [
             {
-                type: "tree",//定义图表
-                initialTreeDepth: -1,//初始显示节点深度
-                name: echartsName,//图表名称
+                type: "tree", //定义图表
+                initialTreeDepth: -1, //初始显示节点深度
+                name: echartsName, //图表名称
                 animationType: "expansion", //初始动画效果
                 animation: true,
                 animationDuration: 3000,
                 animationEasing: "cubicOut", //初始动画的缓动效果。
                 animationDelay: 100,
                 animationDurationUpdate: 3000,
-                data: data,//最终渲染的数据
+                data: data, //最终渲染的数据
                 height: "98%",
                 left: 6,
                 top: "middle",
                 right: "29%",
-                zoom: 1,// 缩放控制
-                layout: "orthogonal",// 布局
+                zoom: 1, // 缩放控制
+                layout: "orthogonal", // 布局
                 // roam: 'move',//控制图表滑动与缩放
-                symbol: 'rect',//标记的图形。
-                symbolSize: 8,//标记的图形大小。
-                itemStyle: {//树图中每个节点的样式，
+                symbol: "rect", //标记的图形。
+                symbolSize: 8, //标记的图形大小。
+                itemStyle: {
+                    //树图中每个节点的样式，
                     color: "rgb(136, 148, 255)",
                     borderJoin: "bevel",
                     shadowColor: "rgba(87, 116, 245, 0.78)",
                     shadowBlur: 2,
                     shadowOffsetX: 3,
                 },
-                label: {//每个节点所对应的文本标签的样式。
+                label: {
+                    //每个节点所对应的文本标签的样式。
                     position: "right",
                     color: "#333",
                     show: true,
-                    formatter: '{b}',
-                    backgroundColor: 'rgb(174, 182, 252)',
-                    borderColor: 'rgba(43, 72, 201, 0.78)',
+                    formatter: "{b}",
+                    backgroundColor: "rgb(174, 182, 252)",
+                    borderColor: "rgba(43, 72, 201, 0.78)",
                     borderWidth: 1,
-                    borderType: 'solid',
+                    borderType: "solid",
                     borderDashOffset: 2,
                     borderRadius: 5,
                     padding: 4,
-                    overflow: 'truncate',
-                    ellipsis: '...',
+                    overflow: "truncate",
+                    ellipsis: "...",
                 },
-                labelLayout: {//标签的统一布局配置。
+                labelLayout: {
+                    //标签的统一布局配置。
                     moveOverlap: "shiftX",
-                    dx: -10
+                    dx: -10,
                 },
-                lineStyle: {//数图边线的样式
-                    color: 'rgba(136, 148, 255,.4)',
+                lineStyle: {
+                    //数图边线的样式
+                    color: "rgba(136, 148, 255,.4)",
                 },
-                leaves: {//叶子节点的特殊配置
+                leaves: {
+                    //叶子节点的特殊配置
                     label: {
                         show: true,
-                        formatter: '{b}',
-                        backgroundColor: 'rgb(174, 182, 252)',
-                        borderColor: 'rgba(95, 122, 245, 0.78)',
+                        formatter: "{b}",
+                        backgroundColor: "rgb(174, 182, 252)",
+                        borderColor: "rgba(95, 122, 245, 0.78)",
                         borderWidth: 1,
-                        borderType: 'solid',
+                        borderType: "solid",
                         borderDashOffset: 2,
                         borderRadius: 2,
                         padding: 4,
                     },
                     itemStyle: {
-                        color: 'rgba(30, 54, 163, 0.78)',
+                        color: "rgba(30, 54, 163, 0.78)",
                         borderJoin: "bevel",
                         shadowColor: "rgba(30, 54, 163, 0.78)",
                         shadowBlur: 2,
                         shadowOffsetX: 3,
-                    }
+                    },
                 },
-                emphasis: {//选中后的样式
+                emphasis: {
+                    //选中后的样式
                     focus: "series",
                     blurScope: "coordinateSystem",
                     itemStyle: {
@@ -197,15 +206,15 @@ Component({
                 id: 0,
                 type: "小程序端",
                 appName: "《工程测绘大师》",
-                shortLink: '#小程序://工程测绘/oAJljHkxfDM1cfD',//小程序id
-                envVersion: 'release',
+                shortLink: "#小程序://工程测绘/oAJljHkxfDM1cfD", //小程序链接
+                envVersion: "release",
                 isSkillsPage: false, //是否显示技术栈页
                 isStructurePage: false, //是否显示页面结构页
                 duty: `<div class="rich-text">
         <ol style="margin:0;padding:0;">
         <li>该小程序的设计初衷是为了解决测绘计算繁琐等问题，便于实时计算繁琐的数据提高测绘的工作效率，后来也成为了我毕设的作品。</li>
         <li>该小程序的设计灵感来源于当时所学的《VB测绘程序设计》这门课程，看了三天的小程序开发文档，利用课余时间足足写了一周才完成初稿，由于当时技术能力有限程序还有很多待改进的地方。</li>
-        <li>该小程序从设计图到代码设计全由我一人完成，目前已有16个较为常见计算功能，后续有时间会不断添加新功能和优化。</li>
+        <li>该小程序从设计图到代码设计全由我一人完成，使用组件开发思想实现，目前已有16个较为常见计算功能，后续会不断添加新功能和优化用户体验。</li>
     </ol>
     </div>`,
             },
@@ -213,13 +222,13 @@ Component({
                 id: 1,
                 type: "小程序端",
                 appName: "《汇车友》",
-                shortLink: '#小程序://汇车友/kgGPCjudHApvqTm',//小程序id
-                envVersion: 'trial',
+                shortLink: "#小程序://汇车友/kgGPCjudHApvqTm", //小程序链接
+                envVersion: "trial",
                 isSkillsPage: false, //是否显示技术栈页
                 isStructurePage: false, //是否显示页面结构页
                 duty: `<div class="rich-text">
                 <ol style="margin:0;padding:0;">
-                <li>该小程序使用组件化开发思想，封装了多个动态组件如tabBar组件、选项卡组件、按钮组件、悬浮窗按钮组件等，根据父组件给子组件传参，高效的实现了代码复用。</li>
+                <li>该小程序使用组件化开发思想开发，封装了多个动态组件如tabBar组件、选项卡组件、按钮组件、悬浮窗按钮组件等，根据父组件给子组件传参，高效的实现了代码复用。</li>
                 <li>该小程序大致有30多个页面从PS切图到标注到最终的页面还原，经历了一周左右，主要是因为边标注边写，较为耗费时间，切图主要用到了PS和Cutterman，标注用了Pxcook标注神器。</li>
                 <li>目前已实现全部主要的逻辑功能，并且已经过不断测试和完善，避免了大多数的bug。单位使用rpx可实现安卓和苹果系统手机端的页面的自适应，同时使用数据缓存实现存数据和读数据，避免某些不必要的请求，提升页面性能。</li>
                 <li>配合ES6+语法更高效的开发应用。</li>
@@ -252,18 +261,19 @@ Component({
         <ol style="margin:0;padding:0;">
         <li>该小程序设计的初衷是为了给自己做一个简单的简历，总结自己上大学以来所做的一些事情，主要使用百度的Echarts进行可视化图表的展示。</li>
         <li>后来在GitHub上找了与简历小程序相关的例子，发现与简历小程序相关的内容甚少，所以决定在GitHub上开源该小项目，同时给小程序中做了详细的注释浅显易懂，使用者只需要稍作修改即可使用。</li>
+        <li>对于想学小程序开发的朋友而言，该简历小程序作为入门开发较为合适，建议先看完一遍小程序开发文档，再进行开发。</li>
         </ol>
     </div>`,
             },
             {
                 id: 4,
                 type: "PC端",
-                appName: "《大屏可视化》",
+                appName: "《炫酷的大屏可视化》",
                 isSkillsPage: false, //是否显示技术栈页
                 isStructurePage: false, //是否显示页面结构页
                 duty: `<div class="rich-text">
         <ol style="margin:0;padding:0;">
-        <li>该程序是我在大学时期课余做的一个小项目，旨在展示企业品牌形象让浏览者能够快速认知该企业业务范围、人员占比、客户分布等功能。</li>
+        <li>该程序旨在展示企业品牌形象让浏览者能够快速认知该企业业务范围、人员占比、客户分布等功能。</li>
         <li>主要使用第三方百度的Echarts结合Vue框架实现，已封装大多数场景使用的接口可以直接拿到后台数据使用，对一些流行的屏幕分辨率做了适配，能够很好适配大中小型屏幕尺寸。</li>
         </ol>
     </div>`,
@@ -276,7 +286,7 @@ Component({
                 isStructurePage: false, //是否显示页面结构页
                 duty: `<div class="rich-text">
         <ol style="margin:0;padding:0;">
-        <li>该程序使用目前VueClI脚手架进行前端工程化构建，使用Vue2框架配合Vue2全家桶进行组件化开发单页面应用。</li>
+        <li>该程序使用VueClI脚手架进行前端工程化构建，是使用Vue2框架配合Vue2全家桶进行组件化开发的单页面应用。</li>
         <li>采用前后端分离模式，前端利用mockjs提前开发相应界面，后端接口开发完毕后，前端立即对接数据。</li>
         <li>可实现找书、读书、前后翻页、主题切换、字号字体设置、阅读进度、加入书签等阅读常用的功能。</li>
         <li>配合ES6+语法更高效的开发单页面应用。</li>
@@ -291,8 +301,36 @@ Component({
                 isStructurePage: false, //是否显示页面结构页
                 duty: `<div class="rich-text">
         <ol style="margin:0;padding:0;">
-        <li>该程序使用目前最流行的Vite前端工程化构建，使用最新版本的Vue3框架配合Vue3全家桶进行组件化开发单页面应用。</li>
+        <li>该程序使用目前最流行的Vite前端工程化构建，是使用最新版本的Vue3框架配合Vue3全家桶进行组件化开发的单页面应用。</li>
         <li>利用10个真实的线上接口，根据QQ音乐的UI界面进行开发，已实现推荐列表、歌手列表、歌手详情、歌曲播放及显示歌词、排行榜、歌单专辑、搜索歌曲等主要功能。</li>
+        <li>抽离了多次使用到的代码进行混入及组件化封装定制。</li>
+        </ol>
+    </div>`,
+            },
+            {
+                id: 7,
+                type: "PC端",
+                appName: "《全栈开发个人博客》",
+                isSkillsPage: false, //是否显示技术栈页
+                isStructurePage: false, //是否显示页面结构页
+                duty: `<div class="rich-text">
+        <ol style="margin:0;padding:0;">
+        <li>该博客为记录个人的所学所得而开发，利用了较为流行的Express框架配合MySQL及Vue实现了全栈开发，同时部署项目上线。</li>
+        <li>技术涉及到前后端及后台管理，相对于只写前端会复杂较多，在一开始写后端的时候也遇到了很多的困难，最终还是克服。</li>
+        <li>对于非科班的我来说或者对大家来说，理解前后端分离开发对于把控整个前端开发体系具有很重要意义，有了这个思想对于前端开发来说也变得更加简单。</li>
+        </ol>
+    </div>`,
+            },
+            {
+                id: 8,
+                type: "PC端",
+                appName: "《全栈开发随心贴》",
+                isSkillsPage: false, //是否显示技术栈页
+                isStructurePage: false, //是否显示页面结构页
+                duty: `<div class="rich-text">
+        <ol style="margin:0;padding:0;">
+        <li>该随心贴是在全栈博客的基础上开发，虽然内容简单，但也是利用了较为流行的Express框架配合MySQL及Vue实现全栈开发。</li>
+        <li>技术涉及到前后端及后台管理，相对于只写前端会复杂较多，一个流程下来让我更加深刻的了解前后端分离开发模式，这对于把控前端开发具有重要意义。</li>
         </ol>
     </div>`,
             },
@@ -309,13 +347,13 @@ Component({
     // 数据监听器
     observers: {
         // 每次改变重新获取显示技术栈的图表组件实例节点
-        'list_skills_id': function () {
-            this.getSkillsComponent()
+        list_skills_id: function () {
+            this.getSkillsComponent();
         },
         // 每次改变重新获取显示页面结构的图表组件实例节点
-        'list_structure_id': function () {
+        list_structure_id: function () {
             this.getStructureComponent();
-        }
+        },
     },
     /**
      * 组件的方法列表
@@ -332,7 +370,9 @@ Component({
                 idNameArr.push(`echarts-skills-page-dom${i}`);
             }
             // 返回当前选择器匹配的实例对象
-            this.skillsPageComponent = this.selectComponent("#" + idNameArr[list_skills_id]);
+            this.skillsPageComponent = this.selectComponent(
+                "#" + idNameArr[list_skills_id]
+            );
         },
         // 动态获取显示页面结构的图表组件实例节点
         getStructureComponent() {
@@ -392,13 +432,14 @@ Component({
             // 从外部引入的当前对应的图表数据
             let data = pageStructureData[list_structure_id];
             // 图表名称
-            let echartsName = `${data[0].name}页面结构`
+            let echartsName = `${data[0].name}页面结构`;
             // 实例的数据
             let projectLists = this.data.projectLists;
             // 每次将当前点击的为true其他的为false，同一类别只显示一个。
             projectLists.forEach((item, index) => {
                 if (item.id === list_structure_id) {
-                    projectLists[index].isStructurePage = !projectLists[index].isStructurePage;
+                    projectLists[index].isStructurePage = !projectLists[index]
+                        .isStructurePage;
                 } else {
                     projectLists[index].isStructurePage = false;
                 }
@@ -408,7 +449,7 @@ Component({
             // 提交修改
             this.setData({
                 projectLists,
-                list_structure_id
+                list_structure_id,
             });
             // 延迟加载图表避免出错
             setTimeout(() => {
@@ -488,13 +529,12 @@ Component({
                     envVersion: projectLists[listid].envVersion,
                     fail(res) {
                         wx.showToast({
-                            title: '打开程序失败',
-                            icon: 'error'
-                        })
+                            title: "打开程序失败",
+                            icon: "error",
+                        });
                         console.log(res);
-                    }
-                })
-
+                    },
+                });
             }
             // 关闭所有展开的图表页面
             projectLists.forEach((item, index) => {
@@ -503,8 +543,8 @@ Component({
             });
             // 提交修改
             this.setData({
-                projectLists
+                projectLists,
             });
-        }
+        },
     },
 });

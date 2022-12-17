@@ -6,7 +6,7 @@
     <!-- 技术栈图表 -->
     <view class="list">
         <view class="title title-bg" hover-class="box-hover">
-            <text style="font-weight: bold;">{{projectLists.appName}}</text><text>{{projectLists.type}}</text>
+            <text style="font-weight: bold;font-size:34rpx;">{{projectLists.appName}}</text><text>{{projectLists.type}}</text>
         </view>
         <view class="title">
             <text>介绍</text>
