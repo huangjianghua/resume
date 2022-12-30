@@ -19,16 +19,16 @@
             <text>工具集</text>
         </view>
         <view class="title" hover-class="box-hover">
-            <text>编码工具：vscode、webstorm、sublime、Hbuilder、微信开发者工具等</text>
+            <text>IDE：vscode、webstorm、sublime、Hbuilder、微信开发者工具等</text>
         </view>
         <view class="title" hover-class="box-hover">
-            <text>常用工具：npm、webpack、git等</text>
+            <text>常用工具：npm、vite、webpack、git等</text>
         </view>
         <view class="title" hover-class="box-hover">
             <text>设计工具：ps、pxcook等</text>
         </view>
         <view class="title" hover-class="box-hover">
-            <text>UI组件库：ElementUI、iview、cube-ui、vant等</text>
+            <text>UI组件库：ElementPlus、Vant、iview、cube等</text>
         </view>
     </view>
 </view>

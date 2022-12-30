@@ -27,7 +27,7 @@ Component({
         navBarHeightRpx: app.globalData.navBarHeightRpx,//navbar高度
         personalInfo: {//个人信息
             avatar:'https://mmbiz.qpic.cn/mmbiz_jpg/fgbJtZz5YSfN3wWeEC8XowtCJneouRasHO1lgLLiay0bNKfzic5jxWU4jFTP9ibsQI1s8lvfmMXvp7nJ1mGvP7w9g/0?wx_fmt=jpeg',
-            name: '黄江华',
+            name: 'Huang',
             age: "25岁",
             sex: '男',
             work: '1年工作经验',
@@ -47,7 +47,7 @@ Component({
         educationLists: [
             { title: '昆明理工大学（本科）', icon: '/pages/src/static/image/school.png' },
             { title: '测绘工程', icon: '/pages/src/static/image/other.png' },
-            { title: '2016-2021', icon: '/pages/src/static/image/time.png' },
+            // { title: '2016-2021', icon: '/pages/src/static/image/time.png' },
         ]
     },
 

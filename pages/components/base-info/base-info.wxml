@@ -16,7 +16,7 @@
                 <view>姓名 : {{personalInfo.name}}</view>
                 <view>期望职位：<text style="color: rgb(144, 155, 252);border: 1rpx solid rgb(144, 155, 252);border-radius: 10rpx;padding: 1rpx 2rpx;">前端工程师</text></view>
                 <view>{{personalInfo.sex}} {{personalInfo.age}} {{personalInfo.work}}</view>
-                <view>地址 : {{personalInfo.address}}</view>
+                <view>故乡 : {{personalInfo.address}}</view>
                 <!-- 联系方式 -->
                 <view class="base-row-container">
                     <view class="contact-item" hover-class="click-hover" wx:for="{{contactLists}}" wx:for-item="contactLists" data-contactid="{{index}}" wx:key="index" bindtap="selectContact">

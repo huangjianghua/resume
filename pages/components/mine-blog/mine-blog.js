@@ -17,6 +17,7 @@ Component({
         navBarHeightRpx: app.globalData.navBarHeightRpx,//navbar高度
         contactLists: [
             { icon: '/pages/src/static/image/github-fill.png', title: 'github', copy: 'https://github.com/huangjianghua' },
+            { icon: '/pages/src/static/image/code.png', title: 'gitee', copy: 'https://huangjianghuahua.gitee.io/blog/' },
             { icon: '/pages/src/static/image/official-account.png', title: '公众号', copy: '雨说前端' },
             { icon: '/pages/src/static/image/Blog.png', title: 'blog', copy: 'https://huangjianghua.github.io/' },
             { icon: '/pages/src/static/image/csdn.png', title: 'CSDN', copy: 'https://blog.csdn.net/qq_43030820' },
@@ -35,22 +36,23 @@ Component({
             // 联系列表原始数据
             const { copy } = this.data.contactLists[index];
             // 预览公众号二维码
-            if (index === 1) {
+            if (index === 2) {
                 wx.previewMedia({
                     sources: [
                         { url: 'https://mmbiz.qpic.cn/mmbiz_png/fgbJtZz5YSePqRcdzytW3NiaxaiadIYVUlsfBT1Rics1psz3np1xImHVOv3WtXJW6PkSkgcLiacalSI2Wia6Bbu5qTA/0?wx_fmt=png', type: 'image' }
                     ],
                     current: 0,
                     showmenu: true,
-                    success(res) {
-                        console.log(res);
-                    },
                     fail(res) {
                         // 复制当前点击的内容
                         wx.setClipboardData({
                             data: copy,
                             success(res) {
-                                wx.getClipboardData()
+                                wx.showToast({
+                                    title: '内容已复制',
+                                    icon:'none'
+                                })
+                                // wx.getClipboardData()
                             },
                             fail() {
                                 wx.showModal({
@@ -65,11 +67,15 @@ Component({
                 wx.setClipboardData({
                     data: copy,
                     success(res) {
-                        wx.getClipboardData()
+                        wx.showToast({
+                            title: '内容已复制,去浏览器打开。',
+                            icon:'none'
+                        })
+                        // wx.getClipboardData()
                     },
                     fail() {
-                        wx.showModal({
-                            title: '内容复制失败'
+                        wx.showToast({
+                            title: '内容复制失败',
                         })
                     }
                 })

@@ -56,7 +56,25 @@ const skillPageData = [
         { value: 10, name: "小程序接口" },
     ],
     [
-        //《大屏可视化》
+        //《全栈后台管理系统》
+        { value: 90, name: "Vue3" },
+        { value: 80, name: "CSS" },
+        { value: 80, name: "Vite" },
+        { value: 80, name: "SASS" },
+        { value: 60, name: "HTML" },
+        { value: 50, name: "组件化开发" },
+        { value: 32, name: "Express" },
+        { value: 32, name: "Mysql" },
+        { value: 30, name: "JS" },
+        { value: 30, name: "ES6+语法" },
+        { value: 28, name: "VueRouter" },
+        { value: 28, name: "Pinia" },
+        { value: 26, name: "Echarts5" },
+        { value: 20, name: "ElementPlus" },
+        { value: 20, name: "Axios" },
+    ],
+    [
+        //《炫酷大屏可视化》
         { value: 90, name: "Vue3" },
         { value: 80, name: "CSS" },
         { value: 80, name: "SASS" },
@@ -619,6 +637,44 @@ let pageStructureData = [
                             name: "各创作平台个人ID",
                         },
                     ],
+                },
+            ],
+        },
+    ],
+    [
+        {
+            name: "后台管理系统",
+            children: [
+                {
+                    name: "login",
+                },
+                {
+                    name: "register",
+                },
+                {
+                    name: "首页",
+                    children: [
+                        {
+                            name: '系统管理',
+                            children: [{
+                                name: '用户管理'
+                            },
+                            {
+                                name: '管理员管理'
+                            }, {
+                                name: '菜单权限管理'
+                            }]
+                        },
+                        {
+                            name: '内容管理'
+                        },
+                        {
+                            name: '编辑器'
+                        },
+                        {
+                            name:'拓展...'
+                        }
+                    ]
                 },
             ],
         },

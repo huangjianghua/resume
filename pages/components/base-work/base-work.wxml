@@ -1,11 +1,11 @@
 <!--pages/components/base-work/base-work.wxml-->
 <!-- 自定义导航栏 -->
 <custom-nav-bar></custom-nav-bar>
-<!-- 图表展示 -->
-<view class="echarts-info title-bg" wx:for="{{projectLists}}" wx:for-index="project_index" wx:for-item="projectLists" wx:key="project_index">
+<!-- 卡片信息 -->
+<view class="echarts-info card-bgcolor" wx:for="{{projectLists}}" wx:for-index="project_index" wx:for-item="projectLists" wx:key="project_index">
     <!-- 技术栈图表 -->
     <view class="list">
-        <view class="title title-bg" hover-class="box-hover">
+        <view class="title title-bgcolor"  hover-class="box-hover">
             <text style="font-weight: bold;font-size:34rpx;">{{projectLists.appName}}</text><text>{{projectLists.type}}</text>
         </view>
         <view class="title">

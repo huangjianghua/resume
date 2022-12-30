@@ -74,8 +74,8 @@ function setOptions(chart, le_data, series_data) {
                 "HTML/HTML5",
                 "CSS/CSS3",
                 "Less/Sass",
-                "JavaScript",
-                "JQuery",
+                "JS",
+                "微信小程序",
                 "React",
                 "Es6+语法",
                 "BootStrap",
@@ -85,6 +85,8 @@ function setOptions(chart, le_data, series_data) {
                 "Uniapp",
                 "Nodejs",
                 "Mongoose",
+                'Vite',
+                "TS"
             ],
         },
         series: series_data, //核心图表的配置
@@ -125,7 +127,7 @@ Component({
      * 组件的方法列表
      */
     methods: {
-        // 租车图表
+        // 图表
         init_skills() {
             // 初始化图表库(将canvas绑定到获取实例dom上)
             this.skillsComponent.init((canvas, width, height, dpr) => {
@@ -177,7 +179,7 @@ Component({
                                 formatter: "{b}", //字符串模板 模板变量
                                 valueAnimation: true, //根据动画实时改变标签位置
                             },
-                            data: [100, 90, 60, 90, 90, 50, 70, 80, 90, 90, 70, 70, 40, 30],
+                            data: [100, 90, 60, 90, 90, 50, 70, 80, 90, 90, 70, 70, 40, 30, 70, 40],
                         },
                     ]
                 );

@@ -1,21 +1,33 @@
 /* pages/components/base-work/base-work.wxss */
 @import "../base-skills/base-skills.scss";
 // 标题背景
-.title-bg{
-  background-image:linear-gradient(to right,rgb(174, 182, 252), rgba(43, 72, 201, 0.78));
+.title-bgcolor {
+  //   background-image:linear-gradient(to bottom,rgb(174, 182, 252), rgba(43, 72, 201, 0.78));
+  //   border-radius: 26rpx;
+  //   color: #fff;
+  //   padding: 0rpx 10rpx 0rpx;
+}
+.card-bgcolor {
+  background-image: linear-gradient(
+    to right,
+    rgb(174, 182, 252),
+    rgba(43, 72, 201, 0.78)
+  );
   border-radius: 20rpx;
   color: #fff;
   padding: 0rpx 10rpx 0rpx;
 }
-
 // 职责列表
 .rich-text {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-wrap: break-word;
   border-left: $border;
   padding-left: 50rpx;
   margin-left: 20rpx;
 }
 // 列表选中后的样式
-.select-list{
+.select-list {
   background-color: rgba(238, 238, 238, 0.829);
   // border-radius: 20rpx;
 }
