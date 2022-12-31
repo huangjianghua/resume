@@ -7,13 +7,10 @@
 - 对于想学小程序开发的朋友而言，该小程序作为入门与进阶开发较为合适，但强烈建议先看完一遍小程序开发文档，这样收获才会最大。
 
 #### 设计图
-![输入图片说明](https://foruda.gitee.com/images/1672458736089340374/510fb432_12060363.jpeg "微信图片_20221231114651.jpg")
-![输入图片说明](https://foruda.gitee.com/images/1672458632520593283/79109db3_12060363.jpeg "微信图片_20221231114757.jpg")
-![输入图片说明](https://foruda.gitee.com/images/1672458652522283182/0cc5a15b_12060363.jpeg "微信图片_20221231115000.jpg")
-![输入图片说明](https://foruda.gitee.com/images/1672458666914013602/b6ec7c11_12060363.jpeg "微信图片_20221231114747.jpg")
-![输入图片说明](https://foruda.gitee.com/images/1672458688301234551/2d333711_12060363.jpeg "微信图片_20221231114743.jpg")
-![输入图片说明](https://foruda.gitee.com/images/1672458704891806747/70012ac0_12060363.jpeg "微信图片_20221231114738.jpg")
-![输入图片说明](https://foruda.gitee.com/images/1672458716465460000/b51bcbf8_12060363.jpeg "微信图片_20221231114731.jpg")
+| ![输入图片说明](https://foruda.gitee.com/images/1672458736089340374/510fb432_12060363.jpeg "微信图片_20221231114651.jpg")  | ![输入图片说明](https://foruda.gitee.com/images/1672458632520593283/79109db3_12060363.jpeg "微信图片_20221231114757.jpg")  | ![输入图片说明](https://foruda.gitee.com/images/1672458652522283182/0cc5a15b_12060363.jpeg "微信图片_20221231115000.jpg")  |
+| ![输入图片说明](https://foruda.gitee.com/images/1672458666914013602/b6ec7c11_12060363.jpeg "微信图片_20221231114747.jpg")  | ![输入图片说明](https://foruda.gitee.com/images/1672458688301234551/2d333711_12060363.jpeg "微信图片_20221231114743.jpg")  | ![输入图片说明](https://foruda.gitee.com/images/1672458704891806747/70012ac0_12060363.jpeg "微信图片_20221231114738.jpg")  |
+| ![输入图片说明](https://foruda.gitee.com/images/1672458716465460000/b51bcbf8_12060363.jpeg "微信图片_20221231114731.jpg")  |   |   |
+
 
 #### 使用教程
 1. git clone git@gitee.com:huangjianghuahua/resume.git
