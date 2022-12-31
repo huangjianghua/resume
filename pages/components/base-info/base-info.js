@@ -27,7 +27,7 @@ Component({
         navBarHeightRpx: app.globalData.navBarHeightRpx,//navbar高度
         personalInfo: {//个人信息
             avatar:'https://mmbiz.qpic.cn/mmbiz_jpg/fgbJtZz5YSfN3wWeEC8XowtCJneouRasHO1lgLLiay0bNKfzic5jxWU4jFTP9ibsQI1s8lvfmMXvp7nJ1mGvP7w9g/0?wx_fmt=jpeg',
-            name: 'Huang',
+            name: 'Mr Huang',
             age: "25岁",
             sex: '男',
             work: '1年工作经验',
