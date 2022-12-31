@@ -18,6 +18,7 @@
 - Echarts
 - Es6
 - 小程序API
+- 阿里矢量图库
 #### 使用教程
 1. git clone git@gitee.com:huangjianghuahua/resume.git
 2. 打开克隆后的代码用微信开发者工具或VScode进行开发即可
